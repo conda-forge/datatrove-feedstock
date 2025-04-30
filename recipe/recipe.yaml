@@ -11,10 +11,6 @@ source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/datatrove-${{ version }}.tar.gz
   sha256: b1fb13324e86126dace2de2dcaa7aeab53facfc1628f5f6e0ecf5789c78649ad
 
-  patches:
-    # Upstream issue: https://github.com/huggingface/datatrove/issues/315
-    - cli.patch
-
 build:
   number: 0
   noarch: python
