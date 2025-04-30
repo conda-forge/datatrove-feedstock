@@ -1,7 +1,7 @@
 context:
   name: datatrove
-  version: 0.4.0
-  python_min: 3.10
+  version: "0.5.0"
+  python_min: '3.10'
 
 package:
   name: ${{ name|lower }}
@@ -9,14 +9,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/datatrove-${{ version }}.tar.gz
-  sha256: c29a873a12ed8d3b089d9adbc80078db3ec45de94ca9e9bf851e0a5c5ce474c3
+  sha256: b1fb13324e86126dace2de2dcaa7aeab53facfc1628f5f6e0ecf5789c78649ad
 
   patches:
     # Upstream issue: https://github.com/huggingface/datatrove/issues/315
     - cli.patch
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
