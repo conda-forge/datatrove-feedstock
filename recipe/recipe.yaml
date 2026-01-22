@@ -1,6 +1,6 @@
 context:
   name: datatrove
-  version: "0.7.0"
+  version: "0.8.0"
   python_min: "3.10"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/datatrove-${{ version }}.tar.gz
-  sha256: 129e0ccf65c53dc125648a509a8d752f30927159543c3961946eed595b3c8590
+  sha256: 7aff3ed59bce1a88173eebe3171c47918e25ae969d6fa7259edf8749e13efff3
   patches:
     # Upstream issue: https://github.com/huggingface/datatrove/issues/315
     - cli.patch
