@@ -1,9 +1,10 @@
 diff --git a/src/datatrove/tools/check_dataset.py b/src/datatrove/tools/check_dataset.py
-index 763e5c3..507dc6f 100644
 --- a/src/datatrove/tools/check_dataset.py
 +++ b/src/datatrove/tools/check_dataset.py
-@@ -94,10 +94,13 @@ def check_dataset(input_folder: DataFolder, tokenizer: str = "gpt2", eos_token:
-             assert last_token == eos_token, f"no EOS at doc end of doc {doci}"
+@@ -95,10 +95,13 @@ def check_dataset(
+             assert last_token == eos_token or (chunk_size and read_count % chunk_size == 0), (
+                 f"no EOS at doc end of doc {doci}"
+             )
  
  
 -if __name__ == "__main__":
@@ -18,10 +19,9 @@ index 763e5c3..507dc6f 100644
 +if __name__ == "__main__":
 +    main()
 diff --git a/src/datatrove/tools/inspect_data.py b/src/datatrove/tools/inspect_data.py
-index 4dce04b..e062589 100644
 --- a/src/datatrove/tools/inspect_data.py
 +++ b/src/datatrove/tools/inspect_data.py
-@@ -40,7 +40,7 @@ parser.add_argument(
+@@ -40,7 +40,7 @@
  )
  
  parser.add_argument(
